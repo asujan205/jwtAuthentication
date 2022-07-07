@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js"
   },
+  "type": "module",
+  
   "author": "",
   "license": "ISC",
   "dependencies": {

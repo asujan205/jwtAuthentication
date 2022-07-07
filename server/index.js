@@ -1,8 +1,7 @@
-const express =require('express');
-const cors = require('cors');
-const jwt= require('jsonwebtoken')
-const bycrt=require('bycryptjs')
-const mongoose = require('mongoose')
+import express from 'express'
+import cors from 'cors'
+import UserRouter from './Router/userRouter.js'
+import './mongo.config.js'
 const app = express()
 const corsOpts = {
     origin: '*',
@@ -19,4 +18,5 @@ const corsOpts = {
   
   app.use(cors(corsOpts));
   app.use(express.json())
+  app.use('/users',UserRouter)
   app.listen(5000, () => console.log('Server started on port 5000'));
